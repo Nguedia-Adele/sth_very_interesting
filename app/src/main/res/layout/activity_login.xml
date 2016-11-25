@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="comn.example.user.e_bank.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bank1"
+            android:layout_marginTop="@dimen/margin_top"/>
+
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Username"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="@dimen/margin_bottom"/>
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_marginBottom="@dimen/margin_bottom"/>
+
+        <Button
+            android:id="@+id/connection_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textAlignment="textStart"
+            android:text="Connection Settings"
+            android:background="@color/white"
+            android:textColor="@color/blue"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="connection_settings"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/connect_sets">
+
+            <TextView
+                android:id="@+id/lorem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pro ed connect"
+                android:textColor="@color/blue"/>
+
+            <EditText
+                android:id="@+id/ipsum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lorem Ipsum connect"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/blue"
+            android:text="LOGIN"
+            android:onClick="login"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:autoLink="email"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"/>
+
+
+        <TextView
+            android:id="@+id/create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:text="Create Account"
+            android:onClick="signup"/>
+
+    </LinearLayout>
+</ScrollView>

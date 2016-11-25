@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/activity_registration_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comn.example.user.e_bank.RegistrationForm">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint=" First name" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Last name"/>
+
+            <EditText
+                android:id="@+id/date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Date of birth"/>
+
+            <EditText
+                android:id="@+id/externalId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="External id"/>
+
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Gender"/>
+
+            <EditText
+                android:id="@+id/activationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Activation date"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Enter Password" />
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"/>
+
+            <TextView
+                android:id="@+id/passwordHint"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="#ff1c5a"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Cancel"
+                    android:background="@color/blue"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/sign_up"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Sign up"
+                    android:background="@color/blue"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:onClick="signup"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+</ScrollView>
