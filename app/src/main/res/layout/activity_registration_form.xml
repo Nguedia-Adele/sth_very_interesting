@@ -6,6 +6,7 @@
     android:id="@+id/activity_registration_form"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="comn.example.user.e_bank.RegistrationForm">
 
         <LinearLayout
@@ -13,62 +14,89 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher"
-                android:layout_gravity="center"/>
+                android:src="@drawable/bank1"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
             <EditText
                 android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint=" First name" />
+                android:hint=" First name"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
             <EditText
                 android:id="@+id/lastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Last name"/>
+                android:hint="Last name"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginLeft="5dp"/>
 
-            <EditText
+            <Button
                 android:id="@+id/date_of_birth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="Date of birth"/>
+                android:text="Date of birth"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:onClick="setDate"/>
+
+            <TextView
+                android:id="@+id/dateView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginLeft="5dp"/>
+
 
             <EditText
                 android:id="@+id/externalId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="External id"/>
+                android:hint="External id"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
             <EditText
                 android:id="@+id/gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Gender"/>
+                android:hint="Gender"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
-            <EditText
+            <Button
                 android:id="@+id/activationDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Activation date"/>
+                android:text="Activation date"
+                android:layout_gravity="start"
+                android:textAlignment="viewStart"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
+
+            <TextView android:id="@+id/dateView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginLeft="5dp"/>
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Enter Password" />
+                android:hint="Enter Password"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
             <EditText
                 android:id="@+id/confirmPassword"
@@ -83,13 +111,16 @@
                 android:layout_height="20dp"
                 android:textColor="#ff1c5a"
                 android:layout_marginLeft="60dp"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="@dimen/margin_bottom"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="1">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp">
 
                 <Button
                     android:id="@+id/cancel"
@@ -106,10 +137,11 @@
                     android:text="Sign up"
                     android:background="@color/blue"
                     android:textColor="@color/white"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="50dp"
                     android:onClick="signup"/>
 
             </LinearLayout>
 
         </LinearLayout>
+
 </ScrollView>

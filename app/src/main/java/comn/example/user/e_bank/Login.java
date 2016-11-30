@@ -18,17 +18,15 @@ public class Login extends AppCompatActivity {
 
         connect_sets = (LinearLayout) findViewById(R.id.connect_sets);
         connect_sets.setVisibility(View.GONE);
-
-        /*dropdown menu for countries
-        Spinner dropdown = (Spinner)findViewById(R.id.spinner);
-        String[] items = new String[]{"Cameroon","South Africa", "France"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
-        */
     }
      /*To execute when "connection settings" is clicked*/
     public void connection_settings(View view) {
-        connect_sets.setVisibility(View.VISIBLE);
+        if(connect_sets.getVisibility() != view.VISIBLE) {
+            connect_sets.setVisibility(view.VISIBLE);
+        }
+        else{
+            connect_sets.setVisibility(view.GONE);
+        }
     }
 
     public void login(View view) {

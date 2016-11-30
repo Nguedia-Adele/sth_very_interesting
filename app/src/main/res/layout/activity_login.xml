@@ -50,7 +50,7 @@
             android:background="@color/white"
             android:textColor="@color/blue"
             android:layout_marginBottom="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
             android:onClick="connection_settings"/>
 
         <LinearLayout
@@ -64,7 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pro ed connect"
-                android:textColor="@color/blue"/>
+                android:textColor="@color/blue"
+                android:layout_marginLeft="5dp"/>
 
             <EditText
                 android:id="@+id/ipsum"

@@ -1,74 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_home"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_tabs"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="comn.example.user.e_bank.Home">
+    android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/tool_bar"
-        layout="@layout/tool_bar">
-    </include>
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
+            app:tabMode="scrollable"/>
+    </android.support.design.widget.AppBarLayout>
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="LOAN"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="5dp"
-                android:onClick="loans"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="SAVINGS"
-                android:layout_marginRight="5dp"
-                android:onClick="savings"/>
-
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="BALANCE"
-                android:layout_marginRight="5dp"/>
-
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="REQUESTS"/>
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/loanPrepays"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="LOAN PREPAYS"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="70dp"/>
-
-    <Button
-        android:id="@+id/disbursals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:text="DISBURSALS"/>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -16,14 +16,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".IntroSlider" />
-        <activity android:name=".RegistrationForm"
-            android:label="Registration"/>
+        <activity
+            android:name=".RegistrationForm"
+            android:label="Registration" />
         <activity android:name=".Login" />
-        <activity android:name=".Home"
-            android:label="Home"/>
-        <activity android:name=".Loans"
-            android:label="Loans"/>
-        <activity android:name=".Savings"></activity>
+        <activity
+            android:name=".Home"
+            android:label="Home" />
     </application>
 
 </manifest>
